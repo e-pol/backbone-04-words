@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Tutorial app: Game Words</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -16,28 +17,52 @@
     <main id="app-main">
     
         <!-- Game setup -->
-        <section id="app-setup">
+        <section id="app-setup" class="settings">
 
             <header id="app-setup-header">
-                <h2>Настройки игры</h2>
-                <button id="startNewGame">Начать игру</button>
+                <h2>Настройки игры</h2>  
+                <div class="language">
+                        <button>English</button>
+                        <button>Русский</button>
+                </div>
                 <span id="app-setup-msg"></span>
             </header>
 
             <!-- Players` setup section -->
-            <section id="app-setup-players">
+            <section id="app-setup-players" class="players">
 
                 <header id="app-setup-players-header">
                     <h3>Игроки</h3>
                     <form id="app-setup-players-new" action ="#">
-                        <label for="app-setup-players-new-name">Добавить игрока</label>
+                        <label for="app-setup-players-new-name"></label>
                         <input id="app-setup-players-new-name" placeholder="Введите имя игрока" autofocus type="text" />
+                        <button id="app-setup-players-clear">x</button>
                         <button id="app-setup-players-add">+</button>
                     </form>
                     <span id="app-setup-players-msg"></span>
                 </header>
 
-                <section id="app-setup-players-main">
+                <section class="players-list">
+                    <ul id="app-setup-players-list">
+                        <li>
+                            <div>
+                                <label>1. Иван Фёдорович Крузенштерн</label>
+                                <button class="destroy">x</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <label>2. Кот Матроскин</label>
+                                <button class="destroy">x</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <label>3. Дядя Фёдор</label>
+                                <button class="destroy">x</button>
+                            </div>
+                        </li>
+                    </ul>
                 </section>
 
                 <footer id="game-setup-players-footer">
@@ -46,11 +71,12 @@
             </section>
 
             <footer id="app-setup-footer">
+                <button id="startNewGame">Начать игру</button>
             </footer>
         </section>
 
         <!-- Main game section -->
-        <section id="app-words">
+        <section id="app-words" class="hidden">
 
             <header id="app-words-header">
                 <h2>Главный экран</h2>
@@ -58,6 +84,7 @@
 
             <section id="app-words-main">
                 <input id="app-words-add" placeholder="Введите ваше слово">
+                <button id="app-words-add">+</button>
             </section>
 
             <footer id="app-words-footer">
@@ -66,7 +93,7 @@
         </section>
 
         <!-- Game statistics -->
-        <section id="app-statistics">
+        <section id="app-statistics" class="hidden">
 
             <header id="app-statistics-header">
                 <h2>Статистика</h2>

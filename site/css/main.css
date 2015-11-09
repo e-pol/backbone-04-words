@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Neucha&subset=latin,cyrillic);
+
+body {
+    background: #f5f5f5 none repeat scroll 0 0;
+    color: #4d4d4d;
+    font-family: 'Neucha', cursive;
+    font-size: 1em;
+    line-height: 1.375em;
+    max-width: 800px;
+    min-width: 400px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 1.05em;
+    text-align: center;
+    margin-top: 1.25em;
+}
+
+h2 {
+    font-size: 2.25em;
+    line-height: 1.25em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.75em;
+    line-height: 1.25em;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.125em;
+    line-height: 1.22222222em;
+}
+
+blockquote {
+    font-size: 1.5em;
+    line-height: 1.4583333em;
+}
+
+.hidden {
+    display: none;
+}
+
+header h2 {
+    margin-top: 3.0em;
+}
+
+/* Game setup */
+
+div.language {
+    margin-top: 1.0em;
+    text-align: center;
+}
+
+.language button {
+    font-size: 1.5em;
+    font-family: 'Neucha', cursive;
+}
+
+.players h3 {
+    margin-top: 1.0em;
+    margin-bottom: 0.75em;
+}
+
+.players-list li {
+    background-color: #fff;
+    border: 1px solid #ededed;
+}
+
+.players form,
+.players-list li {
+    max-width: 30em;
+    margin: 0 auto;
+}
+
+.players-list li label,
+.players input {
+    font-family: 'Neucha', cursive;
+    font-size: 1.5em;
+    display: inline-block;
+    padding: 0.75em 0.75em 0.75em 0.75em;
+}
+
+.players input {
+    padding-right: 4.5em;
+}
+
+.players-list button,
+.players button {
+    color: #af5b5e;
+    float: right;
+    margin-top: 1.5em;
+    margin-right: 1.0em;
+}
+
+#startNewGame {
+    font-size: 2.0em;
+    display: block;
+    font-family: 'Neucha', cursive;
+    margin: 0 auto;
+    margin-top: 1.0em;
+    float: none;
+    color: #4d4d4d;
+}
