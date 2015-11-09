@@ -7,18 +7,124 @@
 </head>
 <body>
 
+    <!-- App header -->
+    <header id="app-header">
+        <h1>Игра в слова</h1>
+    </header>
+
+    <!-- App main section -->
+    <main id="app-main">
+    
+        <!-- Game setup -->
+        <section id="app-setup">
+
+            <header id="app-setup-header">
+                <h2>Настройки игры</h2>
+                <button id="startNewGame">Начать игру</button>
+                <span id="app-setup-msg"></span>
+            </header>
+
+            <!-- Players` setup section -->
+            <section id="app-setup-players">
+
+                <header id="app-setup-players-header">
+                    <h3>Игроки</h3>
+                    <form id="app-setup-players-new" action ="#">
+                        <label for="app-setup-players-new-name">Добавить игрока</label>
+                        <input id="app-setup-players-new-name" placeholder="Введите имя игрока" autofocus type="text" />
+                        <button id="app-setup-players-add">+</button>
+                    </form>
+                    <span id="app-setup-players-msg"></span>
+                </header>
+
+                <section id="app-setup-players-main">
+                </section>
+
+                <footer id="game-setup-players-footer">
+                </footer>
+
+            </section>
+
+            <footer id="app-setup-footer">
+            </footer>
+        </section>
+
+        <!-- Main game section -->
+        <section id="app-words">
+
+            <header id="app-words-header">
+                <h2>Главный экран</h2>
+            </header>
+
+            <section id="app-words-main">
+                <input id="app-words-add" placeholder="Введите ваше слово">
+            </section>
+
+            <footer id="app-words-footer">
+            </footer>
+
+        </section>
+
+        <!-- Game statistics -->
+        <section id="app-statistics">
+
+            <header id="app-statistics-header">
+                <h2>Статистика</h2>
+            </header>
+
+            <section id="app-statistics-main">
+            </section>
+
+            <footer id="app-statistics-footer">
+            </footer>
+
+        </section>
+
+    </main>
+
+    <footer id="app-footer">
+    </footer>
+
+    <!-- TEMPLATES -->
+
+    <!-- player template -->
+    <script id="playerTemplate" type="text/template">
+    </script>
+
+    <!-- word template -->
+    <script id="wordTemplate" type="text/template">
+    </script>
+
+    <!-- statistics template -->
+    <script id="statisticsTemplate" type="text/template">
+    </script>
+
+
+    <!-- DEPENDENCIES -->
+
     <!-- vendors` libraries -->
     <script src="js/libs/jquery-1.11.3.min.js"></script>
     <script src="js/libs/underscore-min.js"></script>
     <script src="js/libs/backbone-min.js"></script>
 
     <!-- project js files -->
+    <!-- models -->
     <script src="js/models/player.js"></script>
     <script src="js/models/word.js"></script>
+    <script src="js/models/player-game-statistics.js"></script>
+    <!-- collections -->
     <script src="js/collections/players.js"></script>
     <script src="js/collections/words.js"></script>
+    <script src="js/collections/statistics.js"></script>
+    <!-- views -->
+    <script src="js/views/player.js"></script>
+    <script src="js/views/word.js"></script>
+    <script src="js/views/player-game-statistics.js"></script>
     <script src="js/views/players.js"></script>
     <script src="js/views/words.js"></script>
+    <script src="js/views/statistics.js"></script>
+    <!-- -->
+    <script src="js/routers/router.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
