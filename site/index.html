@@ -18,7 +18,7 @@
     
         <!-- Game setup -->
         <section id="app-setup" class="settings">
-
+            <button id="startNewGame">Начать игру</button>
             <header id="app-setup-header">
                 <h2>Настройки игры</h2>  
                 <div class="language">
@@ -35,33 +35,15 @@
                     <h3>Игроки</h3>
                     <form id="app-setup-players-new" action ="#">
                         <label for="app-setup-players-new-name"></label>
-                        <input id="app-setup-players-new-name" placeholder="Введите имя игрока" autofocus type="text" />
+                        <input id="app-setup-players-new-name" data-player-attr="name" placeholder="Введите имя игрока" autofocus type="text" />
                         <button id="app-setup-players-clear">x</button>
                         <button id="app-setup-players-add">+</button>
+                        <span id="app-setup-players-msg" class="error-message"></span>
                     </form>
-                    <span id="app-setup-players-msg"></span>
                 </header>
 
                 <section class="players-list">
                     <ul id="app-setup-players-list">
-                        <li>
-                            <div>
-                                <label>1. Иван Фёдорович Крузенштерн</label>
-                                <button class="destroy">x</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label>2. Кот Матроскин</label>
-                                <button class="destroy">x</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label>3. Дядя Фёдор</label>
-                                <button class="destroy">x</button>
-                            </div>
-                        </li>
                     </ul>
                 </section>
 
@@ -71,7 +53,6 @@
             </section>
 
             <footer id="app-setup-footer">
-                <button id="startNewGame">Начать игру</button>
             </footer>
         </section>
 
@@ -116,6 +97,15 @@
 
     <!-- player template -->
     <script id="playerTemplate" type="text/template">
+        <li>
+            <div>
+                <label>
+                    <%= number %>.
+                    <%= name %>
+                </label>
+                <button class="delete">x</button>
+            </div>
+        </li>
     </script>
 
     <!-- word template -->
